@@ -1,0 +1,15 @@
+{
+  "name": "easybank-landing-page-master",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "FernandoQ <octavius.sys@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start":"tsc"
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.11",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.5.2"
+  }
+}
