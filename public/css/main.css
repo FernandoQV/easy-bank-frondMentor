@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+.btn {
+  padding: 1rem 2rem;
+  border: 0;
+  border-radius: 4rem;
+}
+
+.btn--primary {
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 700;
+  background: linear-gradient(to left, #2bb7da, #31d35c);
+}
+
+@media (max-width: 768px) {
+  .btn {
+    padding: .5rem 1rem;
+  }
+  .btn--primary {
+    color: white;
+    font-size: .9rem;
+    font-weight: 600;
+  }
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.menu__link {
+  color: #9698a6;
+  font-weight: 400;
+  transition: border-bottom ease 0.1s;
+  position: relative;
+}
+
+.menu__link::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: #31d35c;
+  position: absolute;
+  bottom: calc(50% - 42px);
+  left: 0;
+  transition: width ease 0.2s;
+}
+
+.menu__link:hover::after {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .menu {
+    border-radius: 0.5rem;
+    flex-direction: column;
+    background-color: white;
+    padding: 3rem;
+  }
+  .menu__link {
+    color: #2d314d;
+  }
+  .menu__link:hover::after {
+    width: 0;
+  }
+}
+
+.image {
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.header {
+  width: 100%;
+  padding: 2rem;
+  height: 84px;
+  position: relative;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+}
+
+.header__logo {
+  flex: 0 0 120px;
+}
+
+.header__nav {
+  flex: 1 0 0;
+}
+
+.header__buttons {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.header__button {
+  display: block;
+}
+
+.header__icon {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .header {
+    height: 64px;
+  }
+  .header__logo {
+    flex: 0 0 100px;
+  }
+  .header__nav {
+    flex: 1 0 0;
+    padding: 2rem;
+    position: absolute;
+    top: 100%;
+    left: -100%;
+    background-color: rgba(25, 24, 27, 0.5);
+    min-height: 100vh;
+    width: 100%;
+    transition: left ease-in-out .3s;
+  }
+  .header__buttons {
+    flex: 1 0 auto;
+    justify-content: flex-end;
+  }
+  .header__button {
+    display: none;
+  }
+  .header .image--icon--menu {
+    display: block;
+  }
+  .header .showMenu {
+    left: 0;
+  }
+}

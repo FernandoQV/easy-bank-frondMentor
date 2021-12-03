@@ -1,14 +1,17 @@
 {
   "name": "easybank-landing-page-master",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "./public/index.html",
   "author": "FernandoQ <octavius.sys@gmail.com>",
   "license": "MIT",
+  "type": "module",
   "scripts": {
-    "start":"tsc"
+    "start": "tsc",
+    "dev":"nodemon -e ts --exec yarn start"
   },
   "devDependencies": {
     "@types/node": "^16.11.11",
+    "nodemon": "^2.0.15",
     "ts-node-dev": "^1.1.8",
     "typescript": "^4.5.2"
   }

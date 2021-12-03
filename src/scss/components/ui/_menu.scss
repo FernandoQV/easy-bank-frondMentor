@@ -1,0 +1,36 @@
+.menu {
+  @include flex(1.5rem);
+  width: 100%;
+  &__link {
+    color: $dark;
+    font-weight: 400;
+    transition: border-bottom ease 0.1s;
+    position: relative;
+    &::after {
+      content: "";
+      display: block;
+      width: 0;
+      height: 2px;
+      background-color: $green;
+      position: absolute;
+      bottom: calc(50% - 42px);
+      left: 0;
+      transition: width ease 0.2s;
+    }
+    &:hover::after {
+      width: 100%;
+    }
+  }
+  @media (max-width: $desktop) {
+    border-radius: 0.5rem;
+    flex-direction: column;
+    background-color: $white;
+    padding: 3rem;
+    &__link {
+      color: $blue;
+      &:hover::after {
+        width: 0;
+      }
+    }
+  }
+}

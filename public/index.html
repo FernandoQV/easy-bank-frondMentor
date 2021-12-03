@@ -13,7 +13,7 @@
     />
 
     <title>Frontend Mentor | Easybank landing page</title>
- <link rel="stylesheet" href="./src/css/main.css">
+ <link rel="stylesheet" href="./css/main.css">
   </head>
   <body>
     <div class="main">
@@ -21,8 +21,8 @@
         <div class="header__logo">
           <img src="./images/logo.svg" alt="Logo" class="image" />
         </div>
-        <nav class="header__nav">
-          <ul class="menu">
+        <nav id="nav" class="header__nav">
+          <ul id="navMenu" class="menu">
             <li class="menu__item"><a href="#" class="menu__link">Home</a></li>
             <li class="menu__item"><a href="#" class="menu__link">About</a></li>
             <li class="menu__item">
@@ -35,11 +35,11 @@
           </ul>
         </nav>
         <div class="header__buttons">
-          <img src="./images/icon-hamburger.svg" alt="Icon Menu" class="header__icon image--icon">
+          <img id="icon-menu" src="./images/icon-hamburger.svg" alt="Icon Menu" class="header__icon image--icon image--icon--menu">
           <button class="header__button btn btn--primary">
             <span class="btn__text">Request Invite</span>
           </button>
-          <img src="./images/icon-close.svg" alt="" class="image--icon header__icon">
+          <img  id="icon-close" src="./images/icon-close.svg" alt="" class="header__icon image--icon image--icon--close ">
         </div>
       </header>
       <section class="hero">
@@ -197,5 +197,7 @@
         <a href="#" class="menu__link"> © Easybank. All Rights Reserved</a>
       </div>
     </footer>
+
+    <script type="module" src="./js/index.js" ></script>
   </body>
 </html>

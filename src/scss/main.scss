@@ -1,6 +1,10 @@
 //utils
 @import './utils/media-queries';
+@import './utils/mixins';
 @import './utils/colors';
+//theme
+@import './theme/spaces';
+
 //base
 @import './base/global';
 //components
